@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>GamachApp02</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{f3430625-1727-4d0a-85f9-897766921906}</ProjectGuid>
+    <Name>GamachCustomerData</Name>
+    <RootNamespace>GamachCustomerData</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Base Enums\" />
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Strings\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxEdt\GamachCustomerCode">
+      <SubType>Content</SubType>
+      <Name>GamachCustomerCode</Name>
+      <Link>EDT Strings\GamachCustomerCode</Link>
+    </Content>
+    <Content Include="AxEdt\GamachCustomerName">
+      <SubType>Content</SubType>
+      <Name>GamachCustomerName</Name>
+      <Link>EDT Strings\GamachCustomerName</Link>
+    </Content>
+    <Content Include="AxForm\GamachCustomerTable">
+      <SubType>Content</SubType>
+      <Name>GamachCustomerTable</Name>
+      <Link>Forms\GamachCustomerTable</Link>
+    </Content>
+    <Content Include="AxLabelFile\GamachLabel02_en-US">
+      <SubType>Content</SubType>
+      <Name>GamachLabel02_en-US</Name>
+      <Link>Label Files\GamachLabel02_en-US</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\GamachCustomerTable">
+      <SubType>Content</SubType>
+      <Name>GamachCustomerTable</Name>
+      <Link>Display Menu Items\GamachCustomerTable</Link>
+    </Content>
+    <Content Include="AxTable\GamachCustomerTable">
+      <SubType>Content</SubType>
+      <Name>GamachCustomerTable</Name>
+      <Link>Tables\GamachCustomerTable</Link>
+    </Content>
+    <Content Include="GamachLabel02.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>GamachLabel02.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\GamachLabel02_en-US</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>

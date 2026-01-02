@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>GamachApp02</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{40c5606d-4df2-4f2b-9ee5-ae974e42be1a}</ProjectGuid>
+    <Name>GamachApp02Relation2</Name>
+    <RootNamespace>GamachApp02Relation2</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>True</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Base Enums\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxEnum\GamachEcomerceOrdersStatus">
+      <SubType>Content</SubType>
+      <Name>GamachEcomerceOrdersStatus</Name>
+      <Link>Base Enums\GamachEcomerceOrdersStatus</Link>
+    </Content>
+    <Content Include="AxForm\GamachEcomTable">
+      <SubType>Content</SubType>
+      <Name>GamachEcomTable</Name>
+      <Link>Forms\GamachEcomTable</Link>
+    </Content>
+    <Content Include="AxLabelFile\Gamach_ECommerce_en-US">
+      <SubType>Content</SubType>
+      <Name>Gamach_ECommerce_en-US</Name>
+      <Link>Label Files\Gamach_ECommerce_en-US</Link>
+    </Content>
+    <Content Include="AxTable\GamachCanclledTable">
+      <SubType>Content</SubType>
+      <Name>GamachCanclledTable</Name>
+      <Link>Tables\GamachCanclledTable</Link>
+    </Content>
+    <Content Include="AxTable\GamachDeliverdTable">
+      <SubType>Content</SubType>
+      <Name>GamachDeliverdTable</Name>
+      <Link>Tables\GamachDeliverdTable</Link>
+    </Content>
+    <Content Include="AxTable\GamachOrderDetailsTable">
+      <SubType>Content</SubType>
+      <Name>GamachOrderDetailsTable</Name>
+      <Link>Tables\GamachOrderDetailsTable</Link>
+    </Content>
+    <Content Include="Gamach_ECommerce.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>Gamach_ECommerce.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\Gamach_ECommerce_en-US</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>

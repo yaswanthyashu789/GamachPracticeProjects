@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>GamachApp02</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{191f1de8-c2ad-4b85-b004-3674fa696ee7}</ProjectGuid>
+    <Name>GamachApp02</Name>
+    <RootNamespace>GamachApp02</RootNamespace>
+    <StartupType>Class</StartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>True</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Strings\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\GamachStudentClass">
+      <SubType>Content</SubType>
+      <Name>GamachStudentClass</Name>
+      <Link>Classes\GamachStudentClass</Link>
+    </Content>
+    <Content Include="AxClass\GamachStudentsDataClass">
+      <SubType>Content</SubType>
+      <Name>GamachStudentsDataClass</Name>
+      <Link>Classes\GamachStudentsDataClass</Link>
+    </Content>
+    <Content Include="AxEdt\GamachStudentCode_0">
+      <SubType>Content</SubType>
+      <Name>GamachStudentCode_0</Name>
+      <Link>EDT Strings\GamachStudentCode_0</Link>
+    </Content>
+    <Content Include="AxEdt\GamachStudentMail_0">
+      <SubType>Content</SubType>
+      <Name>GamachStudentMail_0</Name>
+      <Link>EDT Strings\GamachStudentMail_0</Link>
+    </Content>
+    <Content Include="AxEdt\GamachStudentName_0">
+      <SubType>Content</SubType>
+      <Name>GamachStudentName_0</Name>
+      <Link>EDT Strings\GamachStudentName_0</Link>
+    </Content>
+    <Content Include="AxEdt\GamachStudentPhone_0">
+      <SubType>Content</SubType>
+      <Name>GamachStudentPhone_0</Name>
+      <Link>EDT Strings\GamachStudentPhone_0</Link>
+    </Content>
+    <Content Include="AxForm\GamachStudentsInfo">
+      <SubType>Content</SubType>
+      <Name>GamachStudentsInfo</Name>
+      <Link>Forms\GamachStudentsInfo</Link>
+    </Content>
+    <Content Include="AxLabelFile\GamachStudentLable_en-US">
+      <SubType>Content</SubType>
+      <Name>GamachStudentLable_en-US</Name>
+      <Link>Label Files\GamachStudentLable_en-US</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\GamachStudentsInfo">
+      <SubType>Content</SubType>
+      <Name>GamachStudentsInfo</Name>
+      <Link>Display Menu Items\GamachStudentsInfo</Link>
+    </Content>
+    <Content Include="AxTable\GamachStudentsInfo">
+      <SubType>Content</SubType>
+      <Name>GamachStudentsInfo</Name>
+      <Link>Tables\GamachStudentsInfo</Link>
+    </Content>
+    <Content Include="GamachStudentLable.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>GamachStudentLable.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\GamachStudentLable_en-US</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>
